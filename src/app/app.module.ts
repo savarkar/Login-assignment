@@ -17,6 +17,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RouterModule, Routes } from '@angular/router';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     AppRoutingModule,
     FormsModule, ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot([]),
     StoreModule.forRoot(reducers, {}),
     EffectsModule.forRoot([AuthenticationEffects]),
     StoreRouterConnectingModule.forRoot({

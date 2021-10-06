@@ -10,7 +10,7 @@ import { LoginService } from '../../shared/services/login.service';
 import { LoginComponent } from './login.component';
 
 const validUser = {
-  username: 'test@gmail.com',
+  username: 'test@gmail.com', 
   password: 'test@123'
 }
 
@@ -41,12 +41,13 @@ describe('LoginComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        RouterTestingModule,
       ],
       providers: [
         LoginService,
         HttpClient,
-        RouterTestingModule,
+        
         provideMockStore({}),
       ],
       declarations: [LoginComponent],
@@ -161,4 +162,17 @@ describe('LoginComponent', () => {
     expect(passwordInput.classList).toContain('is-invalid');
   });
 
+  // it('Check is username field is focused', () => {
+  //   // updateForm(blankUser.username, validUser.password);
+  //   fixture.detectChanges();
+  //   const input = fixture.nativeElement.querySelector('#username:focus');
+  //   expect(input).toBeTruthy();
+  // });
+
+  // it('should render card-title as Login here', () => {
+  //   const fixture = TestBed.createComponent(LoginComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.nativeElement;
+  //   expect(compiled.querySelector('.card-title').textContent).toContain('Login here...');
+  // });
 });

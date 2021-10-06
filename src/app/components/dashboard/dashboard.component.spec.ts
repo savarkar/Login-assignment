@@ -34,13 +34,13 @@ describe('DashboardComponent', () => {
     const fixture = TestBed.createComponent(DashboardComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('h3').textContent).toContain('Dashboard');
+    expect(compiled.querySelector('h2').textContent).toContain('Dashboard');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(DashboardComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('h5').textContent).toContain('Welcome');
+    expect(compiled.querySelector('h4').textContent).toContain('Welcome');
   });
 });

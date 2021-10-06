@@ -14,7 +14,7 @@ const PASSWORD_MAX_LENGH = 20;
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterViewInit {
   user: User = new User();
   getState!: Observable<any>;
   errorMessage: string = '';
